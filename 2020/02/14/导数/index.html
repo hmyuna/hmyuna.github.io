@@ -1,85 +1,56 @@
-<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="导数"><meta name="keywords" content="学校,数学"><meta name="author" content="He,undefined"><meta name="copyright" content="He"><title>导数 | 记录</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/reveal.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/theme/black.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/lib/css/zenburn.min.css"><meta name="generator" content="Hexo 4.2.0"></head><body><div class="reveal"><div class="slides"><section data-markdown data-separator="---" data-separator-vertical="--" data-charset="utf-8"><script type="text/template">
-# 你可听过瞬时速度？
-
-- #### 写在前面
-
-  这次的讲稿均由syr和hmy讨论完成，而且是按照自己的理解进行撰写，如有错误，欢迎指出。
-
-  推荐阅读：
-  [3B1B](https://space.bilibili.com/88461692)
-
-  {%bilibili 10308208 %}
-
-  {%bilibili  10352133 %}
-
-  ## 正式开始
-
-- 大家有看过汽车的仪表盘吗？
-
-- ![yibiaopan](https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1581661420&di=7011abd8067d58ac97174d9aad7faa90&src=http://img1.gtimg.com/autonanjing/pics/hv1/81/37/1869/121541241.jpg)
-
-- 但你们有没有想过这到底是怎么工作的？
-
-你在逮虾户的时候并不需要行走一段距离后车子才告诉你速度大小，而是实时反馈。
-
-比如你在开车，上了高速公路，那么你从上高速的时候就在不停加速
-
-我们不妨设你从0$km/h$开始加速，$s(x) = x^3$
-
-![image-20191204212458839.png](https://i.loli.net/2019/12/05/QCfSoVh21pMqgJW.png)那么我们从仪表盘中就可以看到速度$v(x)$只接受$x\mbox{（时间）}$一个参数，而与距离无关
-
-**呵，多么神奇！**
-
-但我们仔细一想，发现这其实是很奇怪的
-
-众所周知$v=\frac{s}{t}$，但这个仪表盘难道可以div by 0(除零警告）?算了一个毫无意义的东西吗？
-
-（抛出无人回答的问题）：有人知道这是怎么回事吗？~~（莫得）~~
-
-其实仪表盘测了车子在一点点时间内移动的距离，然后除以这段时间<img src="https://i.loli.net/2019/12/05/1sSb4PX3RcpxryU.png" alt="image-20191204213545504.png" style="zoom:67%;" />
-
-这是个聪明的做法。
-
-但是，这测出的是个什么呢？
-
-## 斜率的计算
-
-$(x_1, y_1)$, $(x_2, y_2)$
-
-$k = \frac{y_2-y_1}{x_2-x_1}$
-
-而这儿的$y_2-y_1$不就是$\Delta s$.$x_2-x_1$不就$\Delta x$么？
-
-到这里事情就明朗了许多
-
-原来这个玄妙高深的仪表盘测得就是A,B两点的斜率。
-
-而当$\Delta x \to 0$的时候，$\frac{\Delta s}{\Delta x}$即为$s(x)$当$x=1.33$时的斜率
-
-我们试试当$f(x)=x^2\;（x=1）$时的切线斜率吧
-$$
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="导数"><meta name="keywords" content="学校,数学"><meta name="author" content="He"><meta name="copyright" content="He"><title>导数 | 记录</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#你可听过瞬时速度？"><span class="toc-number">1.</span> <span class="toc-text">你可听过瞬时速度？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#写在前面"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">写在前面</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正式开始"><span class="toc-number">1.1.</span> <span class="toc-text">正式开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#斜率的计算"><span class="toc-number">1.2.</span> <span class="toc-text">斜率的计算</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://i.loli.net/2020/03/13/bnoRHPZyQzYvg89.jpg"></div><div class="author-info__name text-center">He</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">11</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">7</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">记录</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">主页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title">导数</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-02-14</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%AD%A6%E6%A0%A1/">学校</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%90%88%E4%BD%9C/">合作</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%AD%A6%E6%A0%A1/%E6%95%B0%E5%AD%A6/">数学</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">736</span><span class="post-meta__separator">|</span><span>阅读时长: 3 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="你可听过瞬时速度？"><a href="#你可听过瞬时速度？" class="headerlink" title="你可听过瞬时速度？"></a>你可听过瞬时速度？</h1><ul>
+<li><h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>这次的讲稿均由syr和hmy讨论完成，而且是按照自己的理解进行撰写，如有错误，欢迎指出。</p>
+<p>推荐阅读：<br><a href="https://space.bilibili.com/88461692" target="_blank" rel="noopener">3B1B</a></p>
+<div class="bili_video"><iframe src="https://player.bilibili.com/player.html?aid=10308208&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" width="544" height="452" allowfullscreen="true"> </iframe></div>
+<div class="bili_video"><iframe src="https://player.bilibili.com/player.html?aid=10352133&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" width="544" height="452" allowfullscreen="true"> </iframe></div>
+<h2 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h2></li>
+<li><p>大家有看过汽车的仪表盘吗？</p>
+</li>
+<li><p><img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&amp;quality=100&amp;size=b4000_4000&amp;sec=1581661420&amp;di=7011abd8067d58ac97174d9aad7faa90&amp;src=http://img1.gtimg.com/autonanjing/pics/hv1/81/37/1869/121541241.jpg" alt="yibiaopan"></p>
+</li>
+<li><p>但你们有没有想过这到底是怎么工作的？</p>
+</li>
+</ul>
+<p>你在逮虾户的时候并不需要行走一段距离后车子才告诉你速度大小，而是实时反馈。</p>
+<p>比如你在开车，上了高速公路，那么你从上高速的时候就在不停加速</p>
+<p>我们不妨设你从0$km/h$开始加速，$s(x) = x^3$</p>
+<p><img src="https://i.loli.net/2019/12/05/QCfSoVh21pMqgJW.png" alt="image-20191204212458839.png">那么我们从仪表盘中就可以看到速度$v(x)$只接受$x\mbox{（时间）}$一个参数，而与距离无关</p>
+<p><strong>呵，多么神奇！</strong></p>
+<p>但我们仔细一想，发现这其实是很奇怪的</p>
+<p>众所周知$v=\frac{s}{t}$，但这个仪表盘难道可以div by 0(除零警告）?算了一个毫无意义的东西吗？</p>
+<p>（抛出无人回答的问题）：有人知道这是怎么回事吗？<del>（莫得）</del></p>
+<p>其实仪表盘测了车子在一点点时间内移动的距离，然后除以这段时间<img src="https://i.loli.net/2019/12/05/1sSb4PX3RcpxryU.png" alt="image-20191204213545504.png" style="zoom:67%;" /></p>
+<p>这是个聪明的做法。</p>
+<p>但是，这测出的是个什么呢？</p>
+<h2 id="斜率的计算"><a href="#斜率的计算" class="headerlink" title="斜率的计算"></a>斜率的计算</h2><p>$(x_1, y_1)$, $(x_2, y_2)$</p>
+<p>$k = \frac{y_2-y_1}{x_2-x_1}$</p>
+<p>而这儿的$y_2-y_1$不就是$\Delta s$.$x_2-x_1$不就$\Delta x$么？</p>
+<p>到这里事情就明朗了许多</p>
+<p>原来这个玄妙高深的仪表盘测得就是A,B两点的斜率。</p>
+<p>而当$\Delta x \to 0$的时候，$\frac{\Delta s}{\Delta x}$即为$s(x)$当$x=1.33$时的斜率</p>
+<p>我们试试当$f(x)=x^2\;（x=1）$时的切线斜率吧</p>
+<script type="math/tex; mode=display">
 f(x)=f(1) = 1 \times 1 = \\
 f(x + \Delta x) = f(1 + \Delta x) = (1 + \Delta x)^2 = 1 + \Delta x^2 + 2\Delta x\\
 \mbox{根据我们推出来的}
 k = f'(1) = \frac{1 + \Delta x ^ 2 + 2\Delta x - 1}{\Delta x}\;(\Delta x \to 0)\\
 \mbox{即}k = f'(1) = \lim_{\Delta x \to 0}\Delta x +2
 \mbox{因为}\Delta x 会趋近于0\\
-所以最后就可以推出当x=1时f(x) 的切线斜率为2
-$$
-
-$$
-当然，\Delta 为0 的做法也可以
-$$
-
-这就是导数：函数的切线斜率
-
-那么我们还可以求出导数的函数：$f'(x)$
-$$
-f'(x)=\frac{f(x +\Delta x) - f(x)}{\Delta x}
-$$
-
-最后，有一个公式：$(x^a)' = a(x^{a - 1})$
-$$
+所以最后就可以推出当x=1时f(x) 的切线斜率为2</script><script type="math/tex; mode=display">
+当然，\Delta 为0 的做法也可以</script><p>这就是导数：函数的切线斜率</p>
+<p>那么我们还可以求出导数的函数：$f’(x)$</p>
+<script type="math/tex; mode=display">
+f'(x)=\frac{f(x +\Delta x) - f(x)}{\Delta x}</script><p>最后，有一个公式：$(x^a)’ = a(x^{a - 1})$</p>
+<script type="math/tex; mode=display">
 \mbox{证明:}\\
 当\Delta x \to 0 时，（1 + \frac{\Delta x}{x})^a - 1 \sim a(\frac{\Delta x}{x}),于是，当x \ne 0 时,\\
 (x^a)' = \lim_{\Delta x \to 0}\frac{(x + \Delta x) ^ a - x ^ a}{\Delta x} = \lim_{\Delta x \to 0}\frac{x^a[(1 + \frac{\Delta x}{x}) ^ a - 1]}{\Delta x}= x ^ a\lim_{\Delta x \to 0}\frac{a(\frac{\Delta x}{x})}{\Delta x} = x ^ a \times \frac{a}{x} = ax^{a - 1},\\
@@ -88,47 +59,50 @@ $$
 0, &a \lt 1\\
 1, &a = 1\\
 \infty, &0 \lt x\lt 1
-\end{cases}
-$$
-
-
-
-```cpp
-while(1)
-{
-    test.rp++;
-    test.score++;
-}
-```
-
-
-
-</script></section></div></div><script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/lib/js/head.min.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/js/reveal.min.js"></script><script>Reveal.initialize({
-  mouseWheel: true,
-  transition: 'slide',
-  transitionSpeed: 'default',
-  parallaxBackgroundImage: '',
-  parallaxBackgroundSize: '',
-  parallaxBackgroundHorizontal: '',
-  parallaxBackgroundVertical: '',
-  markdown: {
-    smartypants: true
+\end{cases}</script><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">    test.rp++;</span><br><span class="line">    test.score++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E6%A0%A1/">学校</a><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/02/16/%E4%B8%AD%E5%9B%BD%E7%9A%84%E6%95%99%E8%82%B2/"><i class="fa fa-chevron-left">  </i><span>中国的教育</span></a></div><div class="next-post pull-right"><a href="/2020/02/14/%E6%95%B0%E5%AD%A6%E8%AF%95%E5%8D%B7/"><span>数学试卷</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'VpbY2bkIKNhBvHAfJ6Hcbh15-gzGzoHsz',
+  appKey:'28alySnxxT0f10MkTdYOUsbQ',
+  placeholder:'说点啥',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2020 By He</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
   },
-  dependencies: [
-    { src: '/js/third-party/reveal/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-    { src: '/js/third-party/reveal/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-    // Syntax highlight for <code> elements
-    { src: '/js/third-party/reveal/highlight.min.js', async: true, callback: function() {
-      // issue #218
-      setTimeout(function () {
-        hljs.initHighlighting();
-      }, 0)
-    } },
-    // Zoom in and out with Alt+click
-    { src: '/js/third-party/reveal/zoom.min.js', async: true },
-    // Speaker notes
-    { src: '/js/third-party/reveal/notes.min.js', async: true },
-    // MathJax
-    { src: '/js/third-party/reveal/math.min.js', async: true }
-  ]
-});</script></body></html>
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
