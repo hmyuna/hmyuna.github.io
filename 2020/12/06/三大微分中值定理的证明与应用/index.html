@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="三大微分中值定理的证明与应用"><meta name="keywords" content=""><meta name="author" content="He"><meta name="copyright" content="He"><title>三大微分中值定理的证明与应用 | 记录</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#三大微分中值定理的证明与应用"><span class="toc-number">1.</span> <span class="toc-text">三大微分中值定理的证明与应用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-罗尔定理"><span class="toc-number">1.1.</span> <span class="toc-text">1. 罗尔定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-拉格朗日中值定理"><span class="toc-number">1.2.</span> <span class="toc-text">2. 拉格朗日中值定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-柯西中值定理"><span class="toc-number">1.3.</span> <span class="toc-text">3. 柯西中值定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-应用"><span class="toc-number">1.4.</span> <span class="toc-text">4.应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-结尾"><span class="toc-number">1.5.</span> <span class="toc-text">5.结尾</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://i.loli.net/2020/03/13/bnoRHPZyQzYvg89.jpg"></div><div class="author-info__name text-center">He</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">16</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">7</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">记录</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">主页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title">三大微分中值定理的证明与应用</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-12-06</time><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">1.4k</span><span class="post-meta__separator">|</span><span>阅读时长: 4 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="三大微分中值定理的证明与应用"><a href="#三大微分中值定理的证明与应用" class="headerlink" title="三大微分中值定理的证明与应用"></a>三大微分中值定理的证明与应用</h1><p>微分中值定理包括罗尔定理，拉格朗日中值定理（微分中值定理），柯西中值定理（广义微分中值定理）。他们是研究函数的有力工具，其中最重要的内容是拉格朗日定理，可以说其他中值定理都拉格朗日中值定理的特殊情况或推广。微分中值定理反映导数的局部性与函数的整体性之间的关系，应用十分广泛。如证明一些特殊的不等式，使用微分中值定理证明函数单调性与导数的关系，证明恒等式等。而他们的推论如洛必达法则，泰勒公式等也是可以处理许多复杂的问题，计算不定式的值，构造出一个与已知函数近似的多项式函数，大大方便了一些初等函数的积分（如$\int e^{x^2}$不是初等函数)。</p>
+<h2 id="1-罗尔定理"><a href="#1-罗尔定理" class="headerlink" title="1. 罗尔定理"></a>1. 罗尔定理</h2><p>我们先从最特殊的定理入手，以这个定理作为跳板，证明接下来两个定理。</p>
+<p>内容</p>
+<p>如果函数f(x)满足：</p>
+<ul>
+<li><p>在闭区间[a,b]上连续；</p>
+</li>
+<li><p>在开区间(a,b)内可导；</p>
+</li>
+<li><p>在区间端点处的函数值相等，即$f(a) = f(b)$，</p>
+</li>
+</ul>
+<p>那么在(a,b)内至少有一点$\xi$($a \lt \xi \lt b$)，使得 $f’(\xi)$)=0.</p>
+<p>几何上，罗尔定理的条件表示，曲线弧 （方程为 ）是一条连续的曲线弧 ，除端点外处处有不垂直于x轴的切线，且两端点的纵坐标相等。而定理结论表明：弧上至少有一点 ，曲线在该点切线是水平的。</p>
+<p>更直观的理解，则<img src="C:\Users\29134\AppData\Roaming\Typora\typora-user-images\image-20201206203643904.png" alt="image-20201206203643904"> </p>
+<p>对于一段两端等高的曲线弧，则总存在一点水平的切线</p>
+<p>证明</p>
+<script type="math/tex; mode=display">
+因为为在闭区间[a,b]上，函数必有最大，最小值。\\
+则不妨设最小值为m,最大值为M\\
+(1)M=m显然f(x)在[a, b]上是个常数
+所以\xi可以是每一个值\\
+f(\xi) = M = m\\
+(2)M \ne m\\
+则端点值f(a)不可能同时等于M,m\\
+设f(a) = f(b) \ne M所以(a,b)上至少有一个点取到M\\
+则设f(\xi) = \\
+则f(\xi)左导数\le 0,右导数\ge 0\\
+f'(\xi) = 0
+综上，总有一个\xi \in (a,b)使它的切线水平</script><h2 id="2-拉格朗日中值定理"><a href="#2-拉格朗日中值定理" class="headerlink" title="2. 拉格朗日中值定理"></a>2. 拉格朗日中值定理</h2><p>内容</p>
+<p>如果函数f(x)满足：</p>
+<ul>
+<li><p>在闭区间[a,b]上连续；</p>
+</li>
+<li><p>在开区间(a,b)内可导；</p>
+</li>
+</ul>
+<p>那么在(a,b)内至少有一点$\xi$($a \lt \xi \lt b$)，使得 $f(b) - f(a) = f’(\xi) (b - a)$)=0.</p>
+<p>这个定理与罗尔定理十分类似，其最大的不同就是取消了$f(a) = f(b)$这一条件，而这也使得此定理应用比罗尔定理广泛的多。</p>
+<p>$\cfrac{f(b) - f(a)}{b - a}$ 其实就是一条过函数两个端点的直线斜率</p>
+<p><img src="C:\Users\29134\AppData\Roaming\Typora\typora-user-images\image-20201206210819295.png" alt="image-20201206210819295"></p>
+<p>则在这一段函数中，有一点切线斜率为上述的值。</p>
+<p>因为形态类似，所以我们考虑使用罗尔定理证明</p>
+<p>如果我们把这个函数放平，使他的端点值处在同一个高度，则证明将会变得十分简单</p>
+<p><img src="C:\Users\29134\AppData\Roaming\Typora\typora-user-images\image-20201206211159094.png" alt="image-20201206211159094"></p>
+<p>其中我们发现，端点值与经过这个端点的直线距离正好为0，所以我们考虑$g(x) = f(x) - [f(a) + \cfrac{f(b) - f(a)}{b - a}(x - a)]$,正是这个函数把原来不特殊的函数变得符合罗尔定理的使用条件。</p>
+<p>则应用罗尔定理，易证得拉格朗日中值定理。</p>
+<h2 id="3-柯西中值定理"><a href="#3-柯西中值定理" class="headerlink" title="3. 柯西中值定理"></a>3. 柯西中值定理</h2><p>如果函数$f(x)$及$F(x)$满足</p>
+<p>(1)在闭区间$[a,b]$上连续；</p>
+<p>(2)在开区间$(a,b)$内可导；</p>
+<p>(3)对任一$x\in (a,b)$，$F’(x) \ne 0$</p>
+<p>那么在(a,b) 内至少有一点$\xi$，使等式$\cfrac{[f(b)-f(a)]}{[F(b)-F(a)]}=\cfrac{f’(\xi)}{F’(\xi)}$成立</p>
+<p>由拉格朗日中值定理</p>
+<script type="math/tex; mode=display">
+F(b) - F(a) = F'(\xi)(b - a)</script><p>所以我们可以由此把结论改写为</p>
+<script type="math/tex; mode=display">
+f'(\xi) - \cfrac{f(b) - f(a)}{F(b) - F(a)}F'(\xi) = 0</script><p>并继续构造函数使得命题可以由罗尔定理推出。</p>
+<script type="math/tex; mode=display">
+g(x) = f(x) - \cfrac{f(b) - f(a)}{F(b) - F(a)}F'(x)\\
+g(a) = g(b) = \cfrac{f(a)F(b) - f(b)F(a)}{F(b) - F(a)}</script><p>满足条件。</p>
+<p>所以命题得证。</p>
+<p>这个定理沟通了函数比与导数比。事实上，当F(x) = x时这个定理就是拉格朗日中值定理。</p>
+<h2 id="4-应用"><a href="#4-应用" class="headerlink" title="4.应用"></a>4.应用</h2><p>这三个定理的应用十分广泛，这里选择洛必达法则作为例子。</p>
+<p>设(1)当x→a时，函数f(x)及F(x)都趋于$0或\infty$；</p>
+<p>(2)在点a的去心邻域内，f’(x)及F’(x)都存在且F’(x)≠0；</p>
+<p>(3)当时$\lim_{x \to a} \cfrac{f’(x)}{F’(x)}$存在(或为无穷大)，那么</p>
+<p>$\lim_{x \to a} \cfrac{f(x)}{F(x)} = \cfrac{f’(x)}{F’(x)}$</p>
+<p>证明</p>
+<script type="math/tex; mode=display">
+在x_0 空心邻域取x\\
+由于柯西中值定理,\cfrac{f(x) - f(x_0)}{F(x) - F(x_0)} = \cfrac{f'(\xi)}{F'(\xi)}\\
+x \to x_0;\xi \to x_0
+得证。</script><p>利用这个结论，我们可以解决未定式求值的问题</p>
+<script type="math/tex; mode=display">
+\lim_{x \to 1} \cfrac{x^4 -1}{x^3 - 1} = \lim_{x \to 1} \cfrac{4x^3}{3x^2} = \lim_{x \to 1} \cfrac{4x}{3} = \cfrac{4}{3}</script><h2 id="5-结尾"><a href="#5-结尾" class="headerlink" title="5.结尾"></a>5.结尾</h2><p>利用好三大中值定理，可以极大简化计算，想到更优的解法。</p>
+</div></article><div class="post-meta__tag-list"></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/08/20/%E8%8B%B1%E8%AF%AD%E6%97%A5%E8%AE%B0/"><span>英语日记</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'VpbY2bkIKNhBvHAfJ6Hcbh15-gzGzoHsz',
+  appKey:'28alySnxxT0f10MkTdYOUsbQ',
+  placeholder:'说点啥',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2020 By He</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
